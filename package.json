@@ -9,7 +9,7 @@
     "dev": "nodemon index.js",
     "build:ui": "rm -rf build && cd ../palautukset/osa3/puhelinluettelo && npm run build --prod && cp -r build ../../../osa3-fso2020",
     "deploy": "git push heroku",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",    
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
     "logs:prod": "heroku logs --tail"
   },
   "repository": {
@@ -27,7 +27,9 @@
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.10.15",
     "morgan": "^1.10.0"
   }
 }
