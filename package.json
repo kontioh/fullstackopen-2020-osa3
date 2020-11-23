@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ../palautukset/osa3/puhelinluettelo && npm run build --prod && cp -r build ../../../osa3-fso2020",
     "deploy": "git push heroku",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/kontioh/fullstackopen-2020-osa3#readme",
   "devDependencies": {
+    "eslint": "^7.14.0",
     "nodemon": "^2.0.6"
   },
   "dependencies": {
